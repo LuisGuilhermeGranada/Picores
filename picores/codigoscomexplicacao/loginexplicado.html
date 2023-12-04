@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <!-- Título da página -->
+    <h1>Login</h1>
+    
+    <!-- Formulário para efetuar o login -->
+    <form action="PHPlogin_registro/loginframework.php" method="post">
+        <!-- Etiqueta associada ao campo matrícula -->
+        <label for="matricula">Matrícula:</label>
+        <!-- Campo de entrada de texto para matrícula, obrigatório -->
+        <input type="text" id="matricula" name="matricula" required><br>
+        
+        <!-- Etiqueta associada ao campo senha -->
+        <label for="senha">Senha:</label>
+        <!-- Campo de entrada de senha, obrigatório -->
+        <input type="password" id="senha" name="senha" required><br>
+        
+        <!-- Botão de submissão do formulário de login -->
+        <button type="submit" name="enviar">Entrar</button>
+    </form>
+    
+    <!-- Formulário para redirecionar à página de cadastro -->
+    <form action="PHPlogin_registro/loginframework.php" method="post">
+        <!-- Botão de submissão para redirecionamento à página de cadastro -->
+        <button type="submit" name="cadastro">Cadastrar-se</button>
+    </form>
+</body>
+</html>

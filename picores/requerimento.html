@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimento</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="icon" href="im/icon.png" type="image/x-icon">
+    <script src="JavaScript/data.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <form action="PHPlogin_registro/requerimento.php" method="post" enctype="multipart/form-data">
+                <h2>Formulário de Requerimento</h2>
+                <div class="input-group">
+                    <label for="tipo_requerimento">Tipo de Requerimento:</label><br><br>
+                    <input type="radio" name="tipo_requerimento" value="segundachamada" id="segunda_chamada"> Segunda Chamada <br>
+                    <input type="radio" name="tipo_requerimento" value="justificativafalta" id="justificativa_falta"> Justificativa de Falta
+                </div>
+                <div class="input-group">
+                    <label for="arquivos">Enviar Arquivos (PDF, PNG, JPG, JPEG):</label><br>
+                    <input type="file" name="arquivos" accept=".pdf, .png, .jpg, .jpeg" multiple>
+                </div>
+                <div class="input-group">
+                    <label for="observacao">Observação:</label><br>
+                    <textarea name="observacao" rows="4" cols="50"></textarea>
+                    <input type="hidden" name="data_envio" id="data_envio" value="">
+                </div>
+                <div class="input-group">
+                    <input type="submit" name="enviar" value="Enviar" onclick="setDataEnvio()"><br><br>
+                    <div class="button-container">
+                    </div>
+                </div>
+            </form>
+            <div class="button-container">
+            <form action="restodepagina/meuspedidos.php" method="post">
+                <button type="submit" name="pedido">Meus Pedidos</button>
+            </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
